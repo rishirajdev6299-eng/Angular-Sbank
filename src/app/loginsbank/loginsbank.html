@@ -1,0 +1,140 @@
+
+
+<body
+  class="d-flex justify-content-center align-items-center vh-100"
+  style="background:blue;"
+>
+
+<div class="container">
+
+  <div
+    class="card shadow-lg border-0 mx-auto"
+    style="max-width:1100px; border-radius:30px;"
+  >
+
+    <div class="row g-0">
+
+      <!-- LEFT SIDE -->
+
+      <div class="col-lg-6 p-4"
+      >
+
+        <div
+          class="h-100 text-white p-5 position-relative"
+          style="
+            background:blue ;
+           border-radius:30px;
+            min-height:650px;
+          "
+        >
+
+          <h1 class="fw-bold display-6 mt-4">
+            Fulfill All Your Dreams and
+            Banking Needs with S Bank
+            
+          </h1>
+
+          <img
+            src="assets/card.jpg"
+            class="img-fluid position-absolute bottom-0 start-50 translate-middle-x"
+            style="max-height:420px; border-bottom-right-radius:30px; border-bottom-left-radius:30px;"
+          >
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT SIDE -->
+
+      <div
+        class="col-lg-6 d-flex flex-column justify-content-center p-5"
+      >
+
+        <!-- LOGO -->
+
+        <div class="mb-5">
+            
+          <h2 class="fw-bold text-dark">
+             <img src="assets/bank.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top me-2">
+            <span style="color:blue;">S</span> Bank
+          </h2>
+
+        </div>
+
+        <!-- LOGIN TITLE -->
+       
+        <h3 class="mb-4">
+          Login
+        </h3>
+
+        <!-- EMAIL -->
+
+        <div class="mb-3">
+            <label class="form-label mb-2">Employee ID</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter Employee ID"
+            [(ngModel)]="username"
+          >
+
+        </div>
+
+        <!-- PASSWORD -->
+
+        <div class="mb-2">
+            <label class="form-label mb-2">Password</label>
+          <input
+            type="password"
+            class="form-control "
+            placeholder="Password"
+            [(ngModel)]="password"
+          >
+
+        </div>
+
+        <!-- FORGOT -->
+
+        <div class="mb-4">
+
+          <a
+            href="#"
+            class="text-decoration-none"
+            style="color:#f55b00;"
+          >
+            Forgot Password?
+          </a>
+
+        </div>
+
+        <!-- BUTTON -->
+
+        <button
+          class="btn btn-lg text-white w-100"
+          style="
+            background:blue ;
+            border-radius:10px;
+          "
+          (click)="login()"
+        >
+          LOGIN
+        </button>
+
+        <!-- FOOTER -->
+
+        <p
+          class="text-muted mt-5"
+          style="font-size:14px;"
+        >
+          © 2026 <span style="color:#f55b00;">S</span> Bank Banglore. All Rights Reserved
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
