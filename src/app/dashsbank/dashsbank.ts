@@ -38,7 +38,7 @@ export class DashsbankComponent {
   constructor( private http: HttpClient) {}
    saveData() {
     console.log(this.account);
-    this.http.post('http://sbank1.onrender.com/api/save',
+    this.http.post('https://sbank1.onrender.com/api/save',
        this.account,{responseType: 'text'})
       .subscribe((response: any) => {
        
@@ -68,7 +68,7 @@ export class DashsbankComponent {
 }
 
 searchData() {
- let url = 'http://sbank1.onrender.com/api/search?';
+ let url = 'https://sbank1.onrender.com/api/search?';
 
   // ACCOUNT NUMBER
   if(this.searchAccountNo){
@@ -121,7 +121,7 @@ deleteAccount(id:any){
 
     this.http.delete(
 
-      `http://sbank1.onrender.com/api/delete/${id}`
+      `https://sbank1.onrender.com/api/delete/${id}`
 
     ).subscribe(
 
@@ -154,7 +154,7 @@ updateAccount(id:any){
 
   this.http.put(
 
-    `http://sbank1.onrender.com/api/update/${this.editData.id}`,
+    `https://sbank1.onrender.com/api/update/${this.editData.id}`,
 
     this.editData
 
@@ -186,7 +186,7 @@ creditAmount(id:any){
 
   this.http.put(
 
-`http://sbank1.onrender.com/api/credit/${id}/${this.creditAmountValue}`,
+`https://sbank1.onrender.com/api/credit/${id}/${this.creditAmountValue}`,
 
     {}
 
@@ -227,7 +227,7 @@ withdrawAmount(id:any){
 
   this.http.put(
 
-`http://sbank1.onrender.com/api/debit/${id}/${this.withdrawAmountValue}`,
+`https://sbank1.onrender.com/api/debit/${id}/${this.withdrawAmountValue}`,
 
     {}
 
@@ -268,7 +268,7 @@ checkBalance(){
 
   this.http.get(
 
-`http://sbank1.onrender.com/api/balance/${this.balanceAccountNo}`
+`https://sbank1.onrender.com/api/balance/${this.balanceAccountNo}`
 
   ).subscribe(
 
@@ -296,7 +296,7 @@ getHistory(accountNo:any){
 
   this.http.get<any[]>(
 
-`http://sbank1.onrender.com/api/history/${accountNo}`
+`https://sbank1.onrender.com/api/history/${accountNo}`
 
   ).subscribe(
 
@@ -316,7 +316,7 @@ downloadStatement(accountNo:any){
 
   this.http.get(
 
-`http://sbank1.onrender.com/api/statement/${accountNo}`,
+`https://sbank1.onrender.com/api/statement/${accountNo}`,
 
     {
 
