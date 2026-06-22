@@ -38,7 +38,7 @@ export class DashsbankComponent {
   constructor( private http: HttpClient) {}
    saveData() {
     console.log(this.account);
-    this.http.post('http://localhost:8080/api/save',
+    this.http.post('http://sbank1.onrender.com/api/save',
        this.account,{responseType: 'text'})
       .subscribe((response: any) => {
        
@@ -68,7 +68,7 @@ export class DashsbankComponent {
 }
 
 searchData() {
- let url = 'http://localhost:8080/api/search?';
+ let url = 'http://sbank1.onrender.com/api/search?';
 
   // ACCOUNT NUMBER
   if(this.searchAccountNo){
@@ -121,7 +121,7 @@ deleteAccount(id:any){
 
     this.http.delete(
 
-      `http://localhost:8080/api/delete/${id}`
+      `http://sbank1.onrender.com/api/delete/${id}`
 
     ).subscribe(
 
@@ -154,7 +154,7 @@ updateAccount(id:any){
 
   this.http.put(
 
-    `http://localhost:8080/api/update/${this.editData.id}`,
+    `http://sbank1.onrender.com/api/update/${this.editData.id}`,
 
     this.editData
 
@@ -186,7 +186,7 @@ creditAmount(id:any){
 
   this.http.put(
 
-`http://localhost:8080/api/credit/${id}/${this.creditAmountValue}`,
+`http://sbank1.onrender.com/api/credit/${id}/${this.creditAmountValue}`,
 
     {}
 
@@ -227,7 +227,7 @@ withdrawAmount(id:any){
 
   this.http.put(
 
-`http://localhost:8080/api/debit/${id}/${this.withdrawAmountValue}`,
+`http://sbank1.onrender.com/api/debit/${id}/${this.withdrawAmountValue}`,
 
     {}
 
@@ -268,7 +268,7 @@ checkBalance(){
 
   this.http.get(
 
-`http://localhost:8080/api/balance/${this.balanceAccountNo}`
+`http://sbank1.onrender.com/api/balance/${this.balanceAccountNo}`
 
   ).subscribe(
 
@@ -296,7 +296,7 @@ getHistory(accountNo:any){
 
   this.http.get<any[]>(
 
-`http://localhost:8080/api/history/${accountNo}`
+`http://sbank1.onrender.com/api/history/${accountNo}`
 
   ).subscribe(
 
@@ -316,7 +316,7 @@ downloadStatement(accountNo:any){
 
   this.http.get(
 
-`http://localhost:8080/api/statement/${accountNo}`,
+`http://sbank1.onrender.com/api/statement/${accountNo}`,
 
     {
 

@@ -49,7 +49,7 @@ export class LoginsbankComponent {
 
     this.http.post(
 
-'http://localhost:8080/api/login',
+'http://sbank1.onrender.com/api/login',
 
       data,
 
